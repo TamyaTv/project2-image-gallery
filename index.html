@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2 Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Image Gallery</h1>
+    <p>A collection of images for Project 2.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Featured Image</h2>
+      <picture>
+        <source media="(max-width: 600px)" srcset="images/featured-square.jpg">
+        <img src="images/featured.jpg" alt="Featured image" width="1200">
+      </picture>
+    </section>
+
+    <section>
+      <h2>Image Gallery</h2>
+      <div class="image-grid">
+        <!-- Add your image figures here -->
+      </div>
+    </section>
+
+    <section>
+      <h2>Video</h2>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4"
+          title="YouTube video"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
