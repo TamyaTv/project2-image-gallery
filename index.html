@@ -1,75 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 2 Image Gallery</title>
+  <title>NYC Landmarks Virtual Tour</title>
+  <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Image Gallery</h1>
-    <p>A collection of images for Project 2.</p>
+    <div class="site-title">NYC Landmarks</div>
   </header>
 
   <main>
-    <section>
-      <h2>Featured Image</h2>
+    <h1>NYC Landmarks Virtual Tour</h1>
+
+    <p>This site highlights some interesting landmarks across New York City's five boroughs.</p>
+
+    <div class="video-container ratio-16-9">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4"
+        title="YouTube video"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <section class="featured-image">
+      <h2>Featured Landmark: Roosevelt Island Tramway</h2>
       <picture>
         <source
           media="(max-width: 600px)"
-          srcset="images/pexels-loquellano-12404963-square.jpg">
+          srcset="images/square/pexels-loquellano-12404963_square.jpg">
+        <source
+          media="(min-width: 601px)"
+          srcset="images/pexels-loquellano-12404963.jpg">
         <img
           src="images/pexels-loquellano-12404963.jpg"
-          alt="Featured photograph">
+          alt="Roosevelt Island Tramway leaving Manhattan">
       </picture>
+      <p>Photo by <a href="https://www.pexels.com/photo/cable-car-above-city-street-12404963/">Raphael Loquellano</a></p>
     </section>
 
     <section>
-      <h2>Image Gallery</h2>
+      <h2>Explore the Landmarks</h2>
       <div class="image-grid">
         <figure>
-          <img src="images/pexels-kelsey-caroline-774981359-19122990.jpg" alt="First gallery photograph">
-          <figcaption>Image 1</figcaption>
+          <img src="images/square/pexels-mora-versio-2150673251-34091093_square.jpg"
+            alt="Statue of Liberty from below looking up at it">
+          <figcaption><a href="https://www.pexels.com/photo/statue-of-liberty-in-new-york-city-usa-34091093/">Statue of Liberty — Photo by Mora Versio</a></figcaption>
         </figure>
 
         <figure>
-          <img src="images/pexels-loquellano-12404963.jpg" alt="Second gallery photograph">
-          <figcaption>Image 2</figcaption>
+          <img src="images/square/pexels-tracehudson-2424391_square.jpg"
+            alt="Empire State Building with lower Manhattan in the background">
+          <figcaption><a href="https://www.pexels.com/photo/empire-state-building-2424391/">Empire State Building — Photo by Trace Hudson</a></figcaption>
         </figure>
 
         <figure>
-          <img src="images/pexels-malcolmhill-12360516.jpg" alt="Third gallery photograph">
-          <figcaption>Image 3</figcaption>
+          <img src="images/square/praswin-prakashan-YOCN1a1m_dg-unsplash_square.jpg"
+            alt="Staten Island Ferry pulling into the dock">
+          <figcaption><a href="https://unsplash.com/photos/a-large-ferry-boat-in-a-body-of-water-YOCN1a1m_dg">Staten Island Ferry — Photo by Praswin Prakashan</a></figcaption>
         </figure>
 
         <figure>
-          <img src="images/pexels-mora-versio-2150673251-34091093.jpg" alt="Fourth gallery photograph">
-          <figcaption>Image 4</figcaption>
+          <img src="images/square/pexels-kelsey-caroline-774981359-19122990_square.jpg"
+            alt="Wonder Wheel ferris wheel at Coney Island">
+          <figcaption><a href="https://www.pexels.com/photo/ferris-wheel-in-amusement-park-19122990/">Wonder Wheel — Photo by Kelsey Caroline</a></figcaption>
         </figure>
 
         <figure>
-          <img src="images/pexels-tracehudson-2424391.jpg" alt="Fifth gallery photograph">
-          <figcaption>Image 5</figcaption>
+          <img src="images/square/pexels-malcolmhill-12360516_square.jpg"
+            alt="Yankee Stadium seen from the water with stadium title visible">
+          <figcaption><a href="https://www.pexels.com/photo/yankee-stadium-under-the-blue-sky-12360516/">Yankee Stadium — Photo by Malcolm Hill</a></figcaption>
         </figure>
 
         <figure>
-          <img src="images/praswin-prakashan-YOCN1a1m_dg-unsplash.jpg" alt="Sixth gallery photograph">
-          <figcaption>Image 6</figcaption>
+          <img src="images/square/pexels-loquellano-12404963_square.jpg"
+            alt="Roosevelt Island Tramway leaving Manhattan">
+          <figcaption><a href="https://www.pexels.com/photo/cable-car-above-city-street-12404963/">Roosevelt Island Tramway — Photo by Raphael Loquellano</a></figcaption>
         </figure>
-      </div>
-    </section>
-
-    <section>
-      <h2>Video</h2>
-      <div class="video-container">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4"
-          title="YouTube video"
-          allowfullscreen>
-        </iframe>
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>Site by Tamya Jones</p>
+    <p><a href="images/credits.txt">Image credits</a></p>
+  </footer>
 </body>
 </html>
