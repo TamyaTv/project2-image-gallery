@@ -1,40 +1,56 @@
 
-/* TamyaTV — responsive landmark gallery */
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: var(--font-body, "Open Sans", Arial, sans-serif);
-  color: var(--color-text, #182638);
-  background: var(--color-background, #F7F5EF);
-  max-width: var(--page-width, 60rem);
-  margin: 0 auto;
-  padding: var(--content-padding, 2rem);
-  line-height: 1.5;
+  margin: 0;
+  font-family: var(--base-family);
+  font-size: var(--text-size-md);
+  line-height: var(--line-height-base);
+  color: var(--primary-text);
+  background-color: var(--primary-background);
 }
 
-h1, h2, .site-title {
-  font-family: var(--font-heading, "Montserrat", Arial, sans-serif);
-  line-height: 1.15;
+header,
+main,
+footer {
+  max-width: var(--page-width);
+  margin-inline: auto;
+  padding: var(--space-8);
 }
 
 .site-title {
-  font-size: 1.4rem;
+  font-family: var(--headings-family);
+  font-size: var(--text-size-lg);
   font-weight: bold;
-  padding: 1rem 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headings-family);
+  line-height: var(--line-height-headings);
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: var(--text-size-3xl);
+}
+
+h2 {
+  font-size: var(--text-size-2xl);
 }
 
 section {
-  margin: 3rem 0;
+  padding: var(--content-padding);
 }
 
-img, video {
+section + section {
+  margin-top: var(--section-spacing);
+}
+
+img,
+video {
   display: block;
   max-width: 100%;
   height: auto;
@@ -49,12 +65,12 @@ img, video {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--grid-gap, 2rem);
+  gap: var(--grid-gap);
 }
 
-figure {
-  margin: 0;
+.image-grid figure {
   min-width: 0;
+  margin: 0;
 }
 
 .image-grid img {
@@ -64,15 +80,23 @@ figure {
 }
 
 figcaption {
-  padding: 0.5rem 0;
+  padding-block: var(--space-2);
+  font-size: var(--text-size-sm);
 }
 
 a {
-  color: var(--color-action, #465B3A);
+  color: var(--action);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 a:hover {
-  color: var(--color-action-hover, #2F4027);
+  color: var(--action-hover);
+}
+
+a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
 }
 
 .video-container {
@@ -101,17 +125,17 @@ a:hover {
 }
 
 footer {
-  margin-top: 4rem;
-  padding: 1.5rem 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--alternate-text);
 }
 
 @media (max-width: 600px) {
-  body {
-    padding: 1rem;
+  header,
+  main,
+  footer {
+    padding: var(--space-4);
   }
 
-  section {
-    margin: 2rem 0;
+  h1 {
+    font-size: var(--text-size-2xl);
   }
 }
