@@ -1,0 +1,25 @@
+
+:root {
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  --line-height-heading: 1.15;
+
+  --color-text: #182638;
+  --color-background: #F7F5EF;
+  --color-action: #465B3A;
+  --color-action-hover: #2F4027;
+
+  --color-text-alt: #4A586B;
+  --color-background-alt: #EDF2F7;
+  --color-action-alt: #2055A5;
+  --color-action-alt-hover: #163D79;
+
+  --spacing-unit: 0.5rem;
+  --page-width: 60rem;
+  --grid-gap: 2rem;
+  --section-spacing: 6rem;
+  --content-padding: 2rem;
+}
