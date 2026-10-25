@@ -1,24 +1,60 @@
 
-/* basic responsive image css */
-img, video{
+/* TamyaTV — responsive landmark gallery */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body, "Open Sans", Arial, sans-serif);
+  color: var(--color-text, #182638);
+  background: var(--color-background, #F7F5EF);
+  max-width: var(--page-width, 60rem);
+  margin: 0 auto;
+  padding: var(--content-padding, 2rem);
+  line-height: 1.5;
+}
+
+h1, h2, .site-title {
+  font-family: var(--font-heading, "Montserrat", Arial, sans-serif);
+  line-height: 1.15;
+}
+
+.site-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+section {
+  margin: 3rem 0;
+}
+
+img, video {
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* Page layout */
-body {
-  font-family: Arial, sans-serif;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-  line-height: 1.5;
+.featured-image img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
 }
 
-/* Responsive image grid */
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--grid-gap, 2rem);
+}
+
+figure {
+  margin: 0;
+  min-width: 0;
 }
 
 .image-grid img {
@@ -27,19 +63,33 @@ body {
   object-fit: cover;
 }
 
-figure {
-  margin: 0;
-}
-
 figcaption {
-  padding: 6px 0;
+  padding: 0.5rem 0;
 }
 
-/* Responsive YouTube video */
+a {
+  color: var(--color-action, #465B3A);
+}
+
+a:hover {
+  color: var(--color-action-hover, #2F4027);
+}
+
 .video-container {
   position: relative;
   width: 100%;
+}
+
+.ratio-16-9 {
   aspect-ratio: 16 / 9;
+}
+
+.ratio-9-16 {
+  aspect-ratio: 9 / 16;
+}
+
+.ratio-4-3 {
+  aspect-ratio: 4 / 3;
 }
 
 .video-container iframe {
@@ -50,8 +100,18 @@ figcaption {
   border: 0;
 }
 
+footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #ccc;
+}
+
 @media (max-width: 600px) {
-  .image-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  body {
+    padding: 1rem;
+  }
+
+  section {
+    margin: 2rem 0;
   }
 }
