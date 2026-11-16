@@ -1,93 +1,96 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore six well-known New York City landmarks, with photos and visitor information.">
   <title>NYC Landmarks Virtual Tour</title>
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="site-title">NYC Landmarks</div>
+  <header class="site-header">
+    <a class="site-title" href="index.html">NYC Landmarks</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+        <a href="landmark-liberty.html">Statue of Liberty</a>
+        <a href="landmark-empire.html">Empire State Building</a>
+        <a href="landmark-ferry.html">Staten Island Ferry</a>
+        <a href="landmark-wonder.html">Wonder Wheel</a>
+        <a href="landmark-yankee.html">Yankee Stadium</a>
+        <a href="landmark-tram.html">Roosevelt Island Tramway</a>
+    </nav>
   </header>
-
   <main>
-    <h1>NYC Landmarks Virtual Tour</h1>
-
-    <p>This site highlights some interesting landmarks across New York City's five boroughs.</p>
-
-    <div class="video-container ratio-16-9">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/tvzTGR0mc8Y"
-        title="YouTube video"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <section class="featured-image">
-      <h2>Featured Landmark: Roosevelt Island Tramway</h2>
-      <picture>
-        <source
-          media="(max-width: 600px)"
-          srcset="images/square/pexels-loquellano-12404963_square.jpg">
-        <source
-          media="(min-width: 601px)"
-          srcset="images/pexels-loquellano-12404963.jpg">
-        <img
-          src="images/pexels-loquellano-12404963.jpg"
-          alt="Roosevelt Island Tramway leaving Manhattan">
-      </picture>
-      <p>Photo by <a href="https://www.pexels.com/photo/cable-car-above-city-street-12404963/">Raphael Loquellano</a></p>
+    <section class="home-intro">
+      <h1>NYC Landmarks Virtual Tour</h1>
+      <p class="intro">This site highlights some interesting landmarks across New York City's five boroughs.</p>
     </section>
-
-    <section>
-      <h2>Explore the Landmarks</h2>
-      <div class="image-grid">
-        <figure>
-          <img src="images/square/pexels-mora-versio-2150673251-34091093_square.jpg"
-            alt="Statue of Liberty from below looking up at it">
-          <figcaption><a href="https://www.pexels.com/photo/statue-of-liberty-in-new-york-city-usa-34091093/">Statue of Liberty — Photo by Mora Versio</a></figcaption>
+    <section class="video-section" aria-label="Video tour">
+      <div class="videoWrapper ratio-16-9">
+        <iframe src="https://www.youtube-nocookie.com/embed/tvzTGR0mc8Y" title="YouTube video about NYC landmarks" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="featured-image" aria-labelledby="featured-title">
+      <div class="section-heading"><p class="eyebrow">Featured place</p><h2 id="featured-title">Roosevelt Island Tramway</h2></div>
+      <a href="landmark-tram.html" class="featured-link">
+        <picture>
+          <source media="(max-width: 600px)" srcset="images/square/pexels-loquellano-12404963_square.jpg">
+          <source media="(min-width: 601px)" srcset="images/pexels-loquellano-12404963.jpg">
+          <img src="images/pexels-loquellano-12404963.jpg" alt="Roosevelt Island Tramway leaving Manhattan" width="1000" height="667">
+        </picture>
+      </a>
+      <p class="featured-credit"><a href="https://www.pexels.com/photo/cable-car-above-city-street-12404963/" target="_blank" rel="noopener noreferrer">Photo by Raphael Loquellano</a></p>
+    </section>
+    <section class="landmark-section" aria-labelledby="landmarks-title">
+      <div class="section-heading"><p class="eyebrow">Explore the city</p><h2 id="landmarks-title">Choose a landmark</h2><p>Open a page to learn more, see the photo, and find directions.</p></div>
+      <div class="landmark-grid">
+                <figure class="landmark-card">
+          <a class="card-link" href="landmark-liberty.html">
+            <img src="images/square/pexels-mora-versio-2150673251-34091093_square.jpg" alt="Statue of Liberty from below looking up at it" loading="lazy" width="600" height="600">
+            <span class="card-title">Statue of Liberty</span>
+          </a>
+          <figcaption class="card-credit"><a href="https://www.pexels.com/photo/statue-of-liberty-in-new-york-city-usa-34091093/" target="_blank" rel="noopener noreferrer">Statue of Liberty — Photo by Mora Versio</a></figcaption>
         </figure>
-
-        <figure>
-          <img src="images/square/pexels-tracehudson-2424391_square.jpg"
-            alt="Empire State Building with lower Manhattan in the background">
-          <figcaption><a href="https://www.pexels.com/photo/empire-state-building-2424391/">Empire State Building — Photo by Trace Hudson</a></figcaption>
+                <figure class="landmark-card">
+          <a class="card-link" href="landmark-empire.html">
+            <img src="images/square/pexels-tracehudson-2424391_square.jpg" alt="Empire State Building with lower Manhattan in the background" loading="lazy" width="600" height="600">
+            <span class="card-title">Empire State Building</span>
+          </a>
+          <figcaption class="card-credit"><a href="https://www.pexels.com/photo/empire-state-building-2424391/" target="_blank" rel="noopener noreferrer">Empire State Building — Photo by Trace Hudson</a></figcaption>
         </figure>
-
-        <figure>
-          <img src="images/square/praswin-prakashan-YOCN1a1m_dg-unsplash_square.jpg"
-            alt="Staten Island Ferry pulling into the dock">
-          <figcaption><a href="https://unsplash.com/photos/a-large-ferry-boat-in-a-body-of-water-YOCN1a1m_dg">Staten Island Ferry — Photo by Praswin Prakashan</a></figcaption>
+                <figure class="landmark-card">
+          <a class="card-link" href="landmark-ferry.html">
+            <img src="images/square/praswin-prakashan-YOCN1a1m_dg-unsplash_square.jpg" alt="Staten Island Ferry pulling into the dock" loading="lazy" width="600" height="600">
+            <span class="card-title">Staten Island Ferry</span>
+          </a>
+          <figcaption class="card-credit"><a href="https://unsplash.com/photos/a-large-ferry-boat-in-a-body-of-water-YOCN1a1m_dg" target="_blank" rel="noopener noreferrer">Staten Island Ferry — Photo by Praswin Prakashan</a></figcaption>
         </figure>
-
-        <figure>
-          <img src="images/square/pexels-kelsey-caroline-774981359-19122990_square.jpg"
-            alt="Wonder Wheel ferris wheel at Coney Island">
-         <figcaption>
-  <a href="landmark-wonder.html">Wonder Wheel</a> —
-  Photo by <a href="https://www.pexels.com/photo/ferris-wheel-in-amusement-park-19122990/">Kelsey Caroline</a>
-</figcaption>
+                <figure class="landmark-card">
+          <a class="card-link" href="landmark-wonder.html">
+            <img src="images/square/pexels-kelsey-caroline-774981359-19122990_square.jpg" alt="Wonder Wheel ferris wheel at Coney Island" loading="lazy" width="600" height="600">
+            <span class="card-title">Wonder Wheel</span>
+          </a>
+          <figcaption class="card-credit"><a href="https://www.pexels.com/photo/ferris-wheel-in-amusement-park-19122990/" target="_blank" rel="noopener noreferrer">Wonder Wheel — Photo by Kelsey Caroline</a></figcaption>
         </figure>
-        
-        <figure>
-          <img src="images/square/pexels-malcolmhill-12360516_square.jpg"
-            alt="Yankee Stadium seen from the water with stadium title visible">
-          <figcaption><a href="https://www.pexels.com/photo/yankee-stadium-under-the-blue-sky-12360516/">Yankee Stadium — Photo by Malcolm Hill</a></figcaption>
+                <figure class="landmark-card">
+          <a class="card-link" href="landmark-yankee.html">
+            <img src="images/square/pexels-malcolmhill-12360516_square.jpg" alt="Yankee Stadium seen from the water with stadium title visible." loading="lazy" width="600" height="600">
+            <span class="card-title">Yankee Stadium</span>
+          </a>
+          <figcaption class="card-credit"><a href="https://www.pexels.com/photo/yankee-stadium-under-the-blue-sky-12360516/" target="_blank" rel="noopener noreferrer">Yankee Stadium — Photo by Malcolm Hill</a></figcaption>
         </figure>
-
-        <figure>
-          <img src="images/square/pexels-loquellano-12404963_square.jpg"
-            alt="Roosevelt Island Tramway leaving Manhattan">
-          <figcaption><a href="https://www.pexels.com/photo/cable-car-above-city-street-12404963/">Roosevelt Island Tramway — Photo by Raphael Loquellano</a></figcaption>
+                <figure class="landmark-card">
+          <a class="card-link" href="landmark-tram.html">
+            <img src="images/square/pexels-loquellano-12404963_square.jpg" alt="Roosevelt Island Tramway leaving Manhattan" loading="lazy" width="600" height="600">
+            <span class="card-title">Roosevelt Island Tramway</span>
+          </a>
+          <figcaption class="card-credit"><a href="https://www.pexels.com/photo/cable-car-above-city-street-12404963/" target="_blank" rel="noopener noreferrer">Roosevelt Island Tramway — Photo by Raphael Loquellano</a></figcaption>
         </figure>
       </div>
     </section>
   </main>
-
-  <footer>
+  <footer class="site-footer">
     <p>Site by Tamya Jones</p>
     <p><a href="images/credits.txt">Image credits</a></p>
   </footer>

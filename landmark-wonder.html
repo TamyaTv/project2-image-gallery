@@ -1,71 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover the Wonder Wheel, a historic Coney Island landmark in Brooklyn, New York.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn about Wonder Wheel in New York City and find directions for a visit.">
   <title>Wonder Wheel | NYC Landmarks</title>
+  <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header class="site-header">
     <a class="site-title" href="index.html">NYC Landmarks</a>
-
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="landmark-wonder.html" aria-current="page">Wonder Wheel</a></li>
-      </ul>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+        <a href="landmark-liberty.html">Statue of Liberty</a>
+        <a href="landmark-empire.html">Empire State Building</a>
+        <a href="landmark-ferry.html">Staten Island Ferry</a>
+        <a href="landmark-wonder.html">Wonder Wheel</a>
+        <a href="landmark-yankee.html">Yankee Stadium</a>
+        <a href="landmark-tram.html">Roosevelt Island Tramway</a>
     </nav>
   </header>
-
-  <main>
-    <section class="landmark-intro">
-      <p>Brooklyn, New York</p>
-      <h1>The Wonder Wheel</h1>
-      <p>
-        The Wonder Wheel is one of Coney Island's most recognizable
-        attractions. It opened in 1920 and has remained an important
-        part of Brooklyn's amusement park history.
-      </p>
-    </section>
-
-    <figure class="landmark-feature">
-      <img
-        src="images/pexels-kelsey-caroline-774981359-19122990.jpg"
-        alt="The Wonder Wheel at Coney Island"
-      >
-      <figcaption>
-        The Wonder Wheel is a familiar part of the Coney Island waterfront.
-      </figcaption>
-    </figure>
-
-    <section class="landmark-details">
-      <h2>A Brooklyn landmark</h2>
-      <p>
-        Located at Deno's Wonder Wheel Amusement Park in Coney Island,
-        the ride is known for its large circular structure and its
-        moving passenger cars. Some of the cars swing as the wheel turns,
-        giving visitors a different experience from a regular Ferris wheel.
-      </p>
-
-      <h2>Why it is special</h2>
-      <p>
-        The Wonder Wheel represents the history of Coney Island as a
-        destination for entertainment and recreation. It continues to
-        attract visitors and remains a recognizable part of New York City.
-      </p>
-    </section>
-
-    <nav class="page-navigation" aria-label="Page navigation">
-      <a href="index.html">Back to NYC Landmarks</a>
+  <main class="landmark-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true"> / </span><span>Wonder Wheel</span></nav>
+    <article class="landmark-detail">
+      <header class="landmark-heading"><p class="eyebrow">Explore New York City</p><h1>Wonder Wheel</h1><p class="intro">The Wonder Wheel is a historic Ferris wheel at Deno’s Wonder Wheel Amusement Park in Coney Island, Brooklyn. It is known for its size and moving passenger cars.</p></header>
+      <figure class="hero-figure">
+        <picture>
+          <source media="(max-width: 600px)" srcset="images/square/pexels-kelsey-caroline-774981359-19122990_square.jpg">
+          <source media="(min-width: 601px)" srcset="images/pexels-kelsey-caroline-774981359-19122990.jpg">
+          <img src="images/pexels-kelsey-caroline-774981359-19122990.jpg" alt="Wonder Wheel ferris wheel at Coney Island" width="1200" height="800">
+        </picture>
+        <figcaption><a href="https://www.pexels.com/photo/ferris-wheel-in-amusement-park-19122990/" target="_blank" rel="noopener noreferrer">Photo by Kelsey Caroline</a></figcaption>
+      </figure>
+      <div class="detail-grid">
+        <section class="content-section" aria-labelledby="about-title">
+          <p class="eyebrow">A little background</p><h2 id="about-title">About the landmark</h2>
+          <h3>How it began</h3><p>The Wonder Wheel was designed by the Eccentric Ferris Wheel Company and opened in 1920. Its combination of fixed and sliding cars made the ride different from a standard Ferris wheel.</p>
+          <h3>Today</h3><p>The wheel remains a Coney Island attraction and a familiar part of the neighborhood’s waterfront amusement district. Seasonal hours can change, so visitors should check the park’s website before going.</p>
+        </section>
+        <section class="visit-card" aria-labelledby="visit-title">
+          <p class="eyebrow">Plan your visit</p><h2 id="visit-title">Directions</h2>
+          <p>Boardwalk at West 12th Street, Brooklyn, NY</p>
+          <ul class="direction-links"><li><a href="https://www.google.com/maps/search/?api=1&query=Boardwalk+at+West+12th+Street,+Brooklyn,+NY" target="_blank" rel="noopener noreferrer">Get directions with Google Maps</a></li><li><a href="https://maps.apple.com/?q=Boardwalk+at+West+12th+Street,+Brooklyn,+NY" target="_blank" rel="noopener noreferrer">Get directions with Apple Maps</a></li></ul>
+          <h3>More information</h3><p><a href="https://www.denoswonderwheel.com/" target="_blank" rel="noopener noreferrer">Official visitor information</a></p>
+        </section>
+      </div>
+    </article>
+    <nav class="page-navigation" aria-label="Landmark pages">
+      <a class="previous-link" href="landmark-ferry.html"><span>Previous landmark</span><strong>← Staten Island Ferry</strong></a>
+      <a class="next-link" href="landmark-yankee.html"><span>Next landmark</span><strong>Yankee Stadium →</strong></a>
     </nav>
   </main>
-
   <footer class="site-footer">
-    <p>NYC Landmarks | Student Project</p>
+    <p>Site by Tamya Jones</p>
+    <p><a href="images/credits.txt">Image credits</a></p>
   </footer>
 </body>
 </html>
-
